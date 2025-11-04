@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+node_modules/
+dist/
+.DS_Store
+*.zip
+*.mov
+*.mp4
+.env
+
