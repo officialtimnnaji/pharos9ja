@@ -1,0 +1,33 @@
+name: Update Slides JSON
+
+on:
+  schedule:
+    - cron: "0 12 * * 1" # Every Monday at 12:00 UTC
+  workflow_dispatch: # Allows manual run
+
+jobs:
+  update-slides:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Slider Update Script
+        run: node scripts/updateSlides.js
+
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/slides.json
+          git commit -m "Automated update of slides.json" || echo "No changes to commit"
+          git push

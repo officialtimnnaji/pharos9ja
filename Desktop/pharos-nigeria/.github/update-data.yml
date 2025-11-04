@@ -1,0 +1,36 @@
+name: Update Members & Events
+
+on:
+  schedule:
+    - cron: '0 12 * * 1' # Every Monday at 12:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Update Members
+        run: node scripts/updateMembers.js
+
+      - name: Update Events
+        run: node scripts/updateEvents.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/members.json src/data/events.json
+          git commit -m "Automated update of members and events" || echo "No changes to commit"
+          git push

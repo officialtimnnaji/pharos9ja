@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Blockchain Workshop",
+    "date": "2025-11-15",
+    "time": "10:00 AM",
+    "host": "Alice Okoro",
+    "description": "Learn the basics of blockchain and smart contracts.",
+    "image": "/images/events/event1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Community Meetup",
+    "date": "2025-11-20",
+    "time": "3:00 PM",
+    "host": "Emeka Nwosu",
+    "description": "Network with blockchain enthusiasts in Lagos.",
+    "image": "/images/events/event2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Pharos Network Overview",
+    "date": "2025-11-25",
+    "time": "1:00 PM",
+    "host": "Fatima Bello",
+    "description": "Introduction to Pharos Network and its roadmap.",
+    "image": "/images/events/event3.jpg"
+  }
+]

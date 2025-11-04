@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Okoro",
+    "role": "Community Lead",
+    "image": "/images/members/alice.jpg",
+    "contact": "alice@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Emeka Nwosu",
+    "role": "Moderator",
+    "image": "/images/members/emeka.jpg",
+    "contact": "emeka@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Fatima Bello",
+    "role": "Event Coordinator",
+    "image": "/images/members/fatima.jpg",
+    "contact": "fatima@example.com"
+  }
+]

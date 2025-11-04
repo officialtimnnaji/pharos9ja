@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Blockchain Workshop",
+    "description": "Learn about blockchain with our experts!",
+    "img": "/images/slider/slide1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Community Meetup",
+    "description": "Connect with fellow blockchain enthusiasts.",
+    "img": "/images/slider/slide2.jpg"
+  }
+]
